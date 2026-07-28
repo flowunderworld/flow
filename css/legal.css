@@ -1,0 +1,100 @@
+/* Páginas de texto corrido (política de privacidade). */
+
+.legal {
+    width: 100%;
+    background: #000000;
+    padding: calc(var(--header-height) + clamp(2.5rem, 7vh, 4rem)) 0 clamp(4rem, 10vh, 6rem);
+    display: flex;
+    justify-content: center;
+}
+
+.legal-container {
+    max-width: 520px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.legal-title {
+    font-size: clamp(1.9rem, 7vw, 3rem);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.legal-title-underline {
+    width: clamp(160px, 40%, 240px);
+    height: 5px;
+    background-color: var(--primary-yellow);
+    border-radius: 3px;
+    margin: 0.9rem 0 clamp(1.5rem, 4vh, 2rem);
+}
+
+.legal-updated {
+    font-size: clamp(0.8rem, 2.8vw, 0.88rem);
+    color: #9a9a9a;
+    margin-bottom: clamp(2rem, 5vh, 2.5rem);
+}
+
+.legal-container h2 {
+    font-size: clamp(1.15rem, 4.2vw, 1.4rem);
+    font-weight: 700;
+    color: var(--primary-yellow);
+    line-height: 1.35;
+    margin: clamp(2rem, 5vh, 2.5rem) 0 0.8rem;
+}
+
+.legal-container p,
+.legal-container li {
+    font-size: clamp(0.92rem, 3.3vw, 1rem);
+    font-weight: 300;
+    line-height: 1.75;
+    color: #e0e0e0;
+}
+
+.legal-container p + p {
+    margin-top: 0.9rem;
+}
+
+.legal-container ul {
+    margin: 0.9rem 0 0;
+    padding-left: 1.3rem;
+}
+
+.legal-container li {
+    margin-bottom: 0.6rem;
+}
+
+.legal-container li::marker {
+    color: var(--primary-yellow);
+}
+
+.legal-container strong {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.legal-container a {
+    color: var(--primary-yellow);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .legal-container {
+        max-width: 680px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .legal-container {
+        max-width: 780px;
+    }
+
+    .legal-container p,
+    .legal-container li {
+        font-size: 1.05rem;
+    }
+}

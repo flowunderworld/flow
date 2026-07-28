@@ -1,0 +1,759 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte Poppins via link (substitui o @import, que serializava o download) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap">
+
+    <!-- Preload do LCP (imagem de fundo do hero) -->
+    <link rel="preload" as="image" href="images/hero-silk.webp">
+
+    <title>Estamparia em Silk para Confecções | Estampa em Corte e Alto Volume | Flow</title>
+    <meta name="description" content="Serigrafia em mesa corrida para confecções, facções e marcas. Estampa em corte, em tecido e em peça pronta. Alto volume com prazo de 1 a 3 dias úteis. São Paulo.">
+    <link rel="canonical" href="https://[[PREENCHER: DOMINIO]]/">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Estamparia em Silk para Confecções | Estampa em Corte e Alto Volume | Flow">
+    <meta property="og:description" content="Serigrafia em mesa corrida para confecções, facções e marcas. Estampa em corte, em tecido e em peça pronta. Alto volume com prazo de 1 a 3 dias úteis. São Paulo.">
+    <meta property="og:image" content="https://[[PREENCHER: DOMINIO]]/images/hero-silk.webp">
+    <meta property="og:url" content="https://[[PREENCHER: DOMINIO]]/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Google Tag (gtag.js) — DESATIVADO ATÉ OS IDs EXISTIREM.
+         Com o placeholder no lugar do ID, o navegador faz uma requisição 404 a
+         cada pageview e nada é medido. Para ativar: substitua os dois tokens
+         abaixo pelos IDs reais e remova este comentário.
+         [[PREENCHER: GA4_ID]]  ·  [[PREENCHER: GOOGLE_ADS_ID]]
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA4_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA4_ID');
+        gtag('config', 'GOOGLE_ADS_ID');
+    </script>
+    -->
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/audience.css">
+    <link rel="stylesheet" href="css/facts.css">
+    <link rel="stylesheet" href="css/heritage.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/process.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Flow Estamparia" class="logo-img" width="76" height="36" decoding="async">
+            </div>
+            <nav class="header-nav" aria-label="Navegação principal">
+                <a href="#services" class="header-nav-link">Serviços</a>
+                <a href="#portfolio" class="header-nav-link">Portfólio</a>
+                <a href="#process" class="header-nav-link">Como funciona</a>
+                <a href="#faq" class="header-nav-link">Dúvidas</a>
+                <a href="confeccao.html" class="header-nav-link">Peça pronta</a>
+            </nav>
+            <button type="button" class="btn-orcamento" data-open-briefing-modal data-wa-origin="home-header" data-wa-msg="Olá! Quero estampar em corte. Vou enviar a arte.">
+                Enviar arte
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <p class="hero-kicker">Silk em mesa corrida · Estampa em corte, Alto volume · São Paulo</p>
+            <!-- Alternativas de H1 para teste A/B:
+                 A) Manda o corte. Sai estampado em 1 a 3 dias.
+                 B) Estampamos o seu corte. Mesa corrida, alto volume, prazo em dias.
+                 C) Silk em mesa corrida. Alto volume, registro fechado, prazo em dias.
+            -->
+            <h1 class="hero-title">Manda o corte.<br>Sai estampado em 1 a 3 dias.</h1>
+            <p class="hero-subtitle">Serigrafia em mesa corrida para confecções, facções e marcas. Alto volume, registro fechado da primeira à última peça, e o seu prazo de entrega preservado.</p>
+            <button type="button" class="btn-pill hero-cta" data-open-briefing-modal data-wa-origin="home-hero" data-wa-msg="Olá! Quero estampar em corte. Vou enviar a arte.">
+                Enviar arte e receber preço por peça
+            </button>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="arrow arrow-1"></div>
+            <div class="arrow arrow-2"></div>
+        </div>
+    </section>
+
+    <section class="audience" id="audience">
+        <div class="audience-container">
+            <p class="audience-text"><strong>Para quem já produz.</strong> Confecção, facção, marca própria, uniformista e lojista. Você manda o corte, a gente devolve estampado.</p>
+        </div>
+    </section>
+
+    <section class="facts" id="facts">
+        <div class="facts-container">
+            <div class="facts-grid">
+                <div class="fact-item">
+                    <span class="fact-number">1.200</span>
+                    <span class="fact-label">peças por dia</span>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-number">1 a 3 dias</span>
+                    <span class="fact-label">úteis para estampa em corte</span>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-number">Até 6</span>
+                    <span class="fact-label">cores por arte</span>
+                </div>
+                <div class="fact-item">
+                    <span class="fact-number">300</span>
+                    <span class="fact-label">peças de pedido mínimo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="services-container">
+            <h2 class="services-title">Por que estampar com a Flow</h2>
+            <div class="services-title-underline"></div>
+            <p class="services-description">
+                Trabalhamos com uma técnica só, e por isso fazemos ela bem feita. Serigrafia em mesa corrida para confecção, facção, marca própria e uniformista — em corte, em tecido ou em peça pronta.
+            </p>
+
+            <div class="carousel-wrapper">
+                <div class="carousel" id="servicesCarousel">
+                    <div class="carousel-track">
+                        <!-- Card 1 -->
+                        <div class="service-card active" data-index="0">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M248 0L208 0c-26.5 0-48 21.5-48 48l0 112c0 35.3 28.7 64 64 64l128 0c35.3 0 64-28.7 64-64l0-112c0-26.5-21.5-48-48-48L328 0l0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80zM64 256c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l160 0c35.3 0 64-28.7 64-64l0-128c0-35.3-28.7-64-64-64l-40 0 0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80-40 0zM352 512l160 0c35.3 0 64-28.7 64-64l0-128c0-35.3-28.7-64-64-64l-40 0 0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80-40 0c-15 0-28.8 5.1-39.7 13.8c4.9 10.4 7.7 22 7.7 34.2l0 160c0 12.2-2.8 23.8-7.7 34.2C323.2 506.9 337 512 352 512z"/></svg>
+                            </div>
+                            <h3 class="service-card-title">Mesa corrida</h3>
+                            <p class="service-card-description">
+                                Estampamos em corte, em tecido e em peça pronta. 1.200 peças por dia, sem fila e sem terceirizar a sua estampa.
+                            </p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="service-card" data-index="1">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+                            </div>
+                            <h3 class="service-card-title">Prazo em dias, não em semanas</h3>
+                            <p class="service-card-description">
+                                Corte na segunda, estampado até quarta. O seu prazo de entrega continua de pé.
+                            </p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="service-card" data-index="2">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M448 256A192 192 0 1 0 64 256a192 192 0 1 0 384 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 80a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm0-224a144 144 0 1 1 0 288 144 144 0 1 1 0-288zM224 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+                            </div>
+                            <h3 class="service-card-title">A peça mil sai igual à peça um</h3>
+                            <p class="service-card-description">
+                                Registro fechado do começo ao fim do lote. Sem sombra, sem deslocamento, sem peça fora do padrão.
+                            </p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="service-card" data-index="3">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378 431.1 230.1 432 141.4L256 66.8s0 0 0 0z"/></svg>
+                            </div>
+                            <h3 class="service-card-title">Estampa que não volta</h3>
+                            <p class="service-card-description">
+                                Tinta que entra na malha, não fica em cima. Não racha, não descola e não desbota na lavagem.
+                            </p>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="service-card" data-index="4">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M368.4 18.3L312.7 74.1 437.9 199.3l55.7-55.7c21.9-21.9 21.9-57.3 0-79.2L447.6 18.3c-21.9-21.9-57.3-21.9-79.2 0zM288 94.6l-9.2 2.8L134.7 140.6c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-3.8 11.3-1 23.9 7.3 32.4L164.7 324.7c-3-6.3-4.7-13.3-4.7-20.7c0-26.5 21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48c-7.4 0-14.4-1.7-20.7-4.7L33.7 500.9c8.6 8.3 21.1 11.2 32.4 7.3l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 2.7-9.2L288 94.6z"/></svg>
+                            </div>
+                            <h3 class="service-card-title">Qualquer arte, até 6 cores</h3>
+                            <p class="service-card-description">
+                                Você manda a arte, a gente grava as telas. Do traço simples ao desenho fechado.
+                            </p>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="service-card" data-index="5">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0L109.6 0C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9c0 0 0 0-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3L448 384l-320 0 0-133.4c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3L64 384l0 64c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-64 0-131.4c-4 1-8 1.8-12.3 2.3z"/></svg>
+                            </div>
+                            <h3 class="service-card-title">Estampamos algodão, PA, poliéster e malha fria</h3>
+                            <p class="service-card-description">
+                                Se você tem dúvida se o seu tecido aceita silk, manda uma amostra que a gente testa antes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-bullets" id="carouselBullets">
+                    <button type="button" class="bullet active" data-index="0" aria-label="Card 1"></button>
+                    <button type="button" class="bullet" data-index="1" aria-label="Card 2"></button>
+                    <button type="button" class="bullet" data-index="2" aria-label="Card 3"></button>
+                    <button type="button" class="bullet" data-index="3" aria-label="Card 4"></button>
+                    <button type="button" class="bullet" data-index="4" aria-label="Card 5"></button>
+                    <button type="button" class="bullet" data-index="5" aria-label="Card 6"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="heritage" id="heritage">
+        <div class="heritage-container">
+            <div class="heritage-body">
+                <p class="heritage-text">
+                    Meus pais começaram a estampar antes de eu saber ler. Vinte anos depois é a mesma família, a mesma mesa, e agora com estrutura para lote grande.
+                    <span class="heritage-signature">Flow Estamparia · São Paulo</span>
+                </p>
+            </div>
+
+            <!-- PLACEHOLDER DE MÍDIA — vídeo curto da mesa corrida em operação.
+                 Entregar: MP4 (H.264), 1920x1080, proporção 16:9, 8 a 15 segundos, sem áudio, até ~3 MB.
+                 Poster: JPG ou WEBP, 1920x1080, mesmo enquadramento do primeiro frame.
+                 Para ativar: descomentar o <source>, adicionar poster="images/mesa-corrida-poster.webp"
+                 e o atributo autoplay no <video>, e remover o bloco .heritage-placeholder abaixo. -->
+            <div class="heritage-media">
+                <video class="heritage-video" muted loop playsinline width="1920" height="1080" aria-label="Mesa corrida da Flow em operação">
+                    <!-- <source src="images/mesa-corrida.mp4" type="video/mp4"> -->
+                </video>
+                <div class="heritage-placeholder">
+                    <svg viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 336l0-16.9 0-128L416 176l0-16.9 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
+                    <span>Vídeo da mesa corrida em operação — arquivo a ser fornecido</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-container">
+            <h2 class="portfolio-title">O Nosso Portfólio</h2>
+            <div class="portfolio-title-underline"></div>
+
+            <div class="portfolio-carousel-wrapper">
+                <div class="portfolio-carousel" id="portfolioCarousel">
+                    <button type="button" class="portfolio-arrow portfolio-prev" aria-label="Projeto anterior">
+                        <svg viewBox="0 0 320 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                    </button>
+                    <button type="button" class="portfolio-arrow portfolio-next" aria-label="Próximo projeto">
+                        <svg viewBox="0 0 320 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                    </button>
+                    <div class="portfolio-track">
+                        <!-- Slide 1 -->
+                        <div class="portfolio-slide active" data-index="0">
+                            <figure class="portfolio-figure">
+                                <div class="portfolio-image-box">
+                                    <img src="images/portfolio-01.webp" alt="Camisetas pretas estampadas em silk com a arte &quot;Chamados para servir&quot; em branco e amarelo, sobre a mesa corrida" class="portfolio-img" width="1600" height="900" loading="lazy" decoding="async">
+                                </div>                            </figure>
+                            <figure class="portfolio-figure">
+                                <div class="portfolio-image-box">
+                                    <img src="images/portfolio-02.webp" alt="Lote de camisetas bordô estampadas em dourado e branco para a Igreja Apostólica Nova Jerusalém, já conferidas e embaladas" class="portfolio-img" width="1600" height="900" loading="lazy" decoding="async">
+                                </div>                            </figure>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="portfolio-slide" data-index="1">
+                            <figure class="portfolio-figure">
+                                <div class="portfolio-image-box">
+                                    <img src="images/portfolio-03.webp" alt="Estampa em corte: peças de malha preta ainda cortadas, estampadas em branco com a arte &quot;Uma igreja para pertencer&quot;, abertas na mesa corrida" class="portfolio-img" width="1600" height="900" loading="lazy" decoding="async">
+                                </div>                            </figure>
+                            <figure class="portfolio-figure">
+                                <div class="portfolio-image-box">
+                                    <img src="images/portfolio-04.webp" alt="Camisas polo rosa estampadas em azul com o brasão da Pastoral Familiar Brasil, empilhadas ao fim da produção" class="portfolio-img" width="1600" height="900" loading="lazy" decoding="async">
+                                </div>                            </figure>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="portfolio-slide" data-index="2">
+                            <figure class="portfolio-figure">
+                                <div class="portfolio-image-box">
+                                    <img src="images/portfolio-05.webp" alt="Camiseta preta com estampa dourada do Encontro de Casais com Cristo, mostrando o acabamento da tinta metálica sobre malha escura" class="portfolio-img" width="1600" height="900" loading="lazy" decoding="async">
+                                </div>                            </figure>
+                            <figure class="portfolio-figure">
+                                <div class="portfolio-image-box">
+                                    <img src="images/portfolio-06.webp" alt="Estampa em corte de regatas em quatro cores de malha — marinho, cinza, vermelho e azul claro — com a mesma arte registrada peça a peça na mesa corrida" class="portfolio-img" width="1600" height="900" loading="lazy" decoding="async">
+                                </div>                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-bullets" id="portfolioBullets">
+                    <button type="button" class="bullet active" data-index="0" aria-label="Portfólio 1"></button>
+                    <button type="button" class="bullet" data-index="1" aria-label="Portfólio 2"></button>
+                    <button type="button" class="bullet" data-index="2" aria-label="Portfólio 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process" id="process">
+        <div class="process-container">
+            <h2 class="process-title">Como funciona</h2>
+            <div class="process-title-underline"></div>
+            <p class="process-description">
+                Do primeiro contato até a retirada, sem etapa escondida. Pagamento em duas partes, prova aprovada antes de gravar tela.
+            </p>
+
+            <div class="process-carousel-wrapper">
+                <div class="process-carousel" id="processCarousel">
+                    <div class="process-track">
+                        <!-- Passo 1 -->
+                        <div class="process-card active" data-index="0">
+                            <div class="process-icon">
+                                <span class="process-step-number" aria-hidden="true">1</span>
+                            </div>
+                            <h3 class="process-card-title">Manda a arte pelo WhatsApp</h3>
+                            <p class="process-card-description">
+                                Envie a arte, a quantidade, o número de cores e o tecido. Aceitamos PDF, AI, EPS, CDR ou PNG em alta.
+                            </p>
+                        </div>
+
+                        <!-- Passo 2 -->
+                        <div class="process-card" data-index="1">
+                            <div class="process-icon">
+                                <span class="process-step-number" aria-hidden="true">2</span>
+                            </div>
+                            <h3 class="process-card-title">Recebe o preço por peça e o prazo</h3>
+                            <p class="process-card-description">
+                                Analisamos número de telas, tamanho e cobertura da estampa, e devolvemos o valor fechado por peça com a data de entrega.
+                            </p>
+                        </div>
+
+                        <!-- Passo 3 -->
+                        <div class="process-card" data-index="2">
+                            <div class="process-icon">
+                                <span class="process-step-number" aria-hidden="true">3</span>
+                            </div>
+                            <h3 class="process-card-title">Aprova a prova e paga 50%</h3>
+                            <p class="process-card-description">
+                                Você recebe a prova da arte antes de qualquer tela ser gravada. Com o seu aceite e os 50% iniciais, a mesa é reservada.
+                            </p>
+                        </div>
+
+                        <!-- Passo 4 -->
+                        <div class="process-card" data-index="3">
+                            <div class="process-icon">
+                                <span class="process-step-number" aria-hidden="true">4</span>
+                            </div>
+                            <h3 class="process-card-title">Manda o corte (ou as peças)</h3>
+                            <p class="process-card-description">
+                                Corte, tecido em rolo ou peça pronta: você entrega o material e ele entra direto na fila da mesa.
+                            </p>
+                        </div>
+
+                        <!-- Passo 5 -->
+                        <div class="process-card" data-index="4">
+                            <div class="process-icon">
+                                <span class="process-step-number" aria-hidden="true">5</span>
+                            </div>
+                            <h3 class="process-card-title">Estampamos e conferimos peça por peça</h3>
+                            <p class="process-card-description">
+                                Antes do lote rodar, uma peça piloto tirada do seu próprio material é estampada e aprovada. Na saída, a conferência é peça a peça.
+                            </p>
+                        </div>
+
+                        <!-- Passo 6 -->
+                        <div class="process-card" data-index="5">
+                            <div class="process-icon">
+                                <span class="process-step-number" aria-hidden="true">6</span>
+                            </div>
+                            <h3 class="process-card-title">Paga os 50% e retira</h3>
+                            <p class="process-card-description">
+                                Os outros 50% na retirada. Você busca em São Paulo ou combina a entrega com a gente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-bullets" id="processBullets">
+                    <button type="button" class="bullet active" data-index="0" aria-label="Passo 1"></button>
+                    <button type="button" class="bullet" data-index="1" aria-label="Passo 2"></button>
+                    <button type="button" class="bullet" data-index="2" aria-label="Passo 3"></button>
+                    <button type="button" class="bullet" data-index="3" aria-label="Passo 4"></button>
+                    <button type="button" class="bullet" data-index="4" aria-label="Passo 5"></button>
+                    <button type="button" class="bullet" data-index="5" aria-label="Passo 6"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <h2 class="faq-title">Perguntas frequentes</h2>
+            <div class="faq-title-underline"></div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-1" id="faq-btn-1">
+                        <span>Vocês estampam o meu corte ou só peça pronta?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" aria-hidden="true">
+                        <p>Estampamos o seu corte, o seu tecido e a sua peça pronta. É o nosso serviço principal: você entrega o material e recebe de volta estampado. Se você não tem o corte, também produzimos a peça inteira — nesse caso, veja a página de peça pronta.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
+                        <span>Qual o pedido mínimo?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" aria-hidden="true">
+                        <p>300 peças por arte. A serigrafia compensa no volume: o custo das telas é fixo e se dilui na quantidade, então quanto maior o lote, menor o valor por peça.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
+                        <span>Qual a capacidade por dia e o prazo por faixa de volume?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" aria-hidden="true">
+                        <p>A mesa corrida faz até 1.200 peças por dia. A estampa em corte fica pronta em 1 a 3 dias úteis conforme o volume, contados da aprovação da arte e da chegada do material. Para lotes acima da capacidade diária, o prazo é fechado junto com o orçamento.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4">
+                        <span>Como funciona o pagamento?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" aria-hidden="true">
+                        <p>50% na aprovação da arte e 50% na retirada. A gente só grava tela e reserva mesa depois do seu aceite na prova.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-5" id="faq-btn-5">
+                        <span>Como funciona o custo por cor?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" aria-hidden="true">
+                        <p>Cada cor da sua arte exige uma tela exclusiva, gravada só para o seu pedido. Uma arte de três cores usa três telas. Por isso o orçamento separa o custo das telas do valor por peça. Estampamos até 6 cores.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-6" id="faq-btn-6">
+                        <span>Preciso ter a arte pronta?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-6" role="region" aria-labelledby="faq-btn-6" aria-hidden="true">
+                        <p>Ajuda, mas não é obrigatório. Trabalhamos com arte em vetor; se a sua estiver em outro formato, avaliamos e ajustamos antes de gravar as telas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-7" id="faq-btn-7">
+                        <span>Qual o tamanho máximo de estampa?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-7" role="region" aria-labelledby="faq-btn-7" aria-hidden="true">
+                        <p>60 x 60 cm. Acima disso, mande a arte que a gente avalia junto o melhor jeito de dividir ou reposicionar.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-8" id="faq-btn-8">
+                        <span>Vocês estampam poliéster?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-8" role="region" aria-labelledby="faq-btn-8" aria-hidden="true">
+                        <p>Sim. Poliéster pede atenção com migração de cor: o corante do tecido pode subir e manchar a estampa dias depois, principalmente em peça escura com estampa clara. Por isso testamos numa peça piloto do seu próprio lote antes de rodar. Também estampamos algodão, PA e malha fria.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-9" id="faq-btn-9">
+                        <span>Fazem peça piloto antes de rodar o lote?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-9" role="region" aria-labelledby="faq-btn-9" aria-hidden="true">
+                        <p>Sempre, e ela sai do seu próprio lote — não de uma peça de amostra nossa. Você recebe a foto da piloto e a mesa só roda depois do seu OK.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-10" id="faq-btn-10">
+                        <span>E se acontecer algum problema com o meu corte?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-10" role="region" aria-labelledby="faq-btn-10" aria-hidden="true">
+                        <p>É exatamente para isso que existe a peça piloto: qualquer ajuste de posição, cor ou tamanho é resolvido nela, não com o lote inteiro já impresso. Na saída conferimos peça por peça, e o que sair fora do padrão é separado antes da entrega.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-11" id="faq-btn-11">
+                        <span>Emitem nota fiscal?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-11" role="region" aria-labelledby="faq-btn-11" aria-hidden="true">
+                        <p>Sim, emitimos nota fiscal quando o cliente solicita.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="new-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>Estampa em corte,<br> em tecido <br> e em peça pronta. <br> Mesa corrida em São Paulo.</h2>
+            </div>
+            <div class="footer-column">
+                <h3>SÃO PAULO - ITAIM PAULISTA</h3>
+                <p><a href="mailto:flowconfeccoes@gmail.com">flowconfeccoes@gmail.com</a></p>
+                <p><a href="tel:+5511984651912">+55 11 98465-1912</a></p>
+                <p>Segunda a sexta, das 08h às 18h</p>
+                <address>
+                    Rua Sebastião Lopes Grandio,<br>
+                   31, Jardim Nélia
+                </address>
+                <!-- CNPJ ainda em desenvolvimento — quando sair, incluir aqui: [[PREENCHER: CNPJ]] -->
+                <p><a href="https://maps.app.goo.gl/QVHovHkV28zMtytw7" target="_blank" rel="noopener" class="map-link">Veja no mapa<svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg></a></p>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="follow-us">Siga-nos</h3>
+                <div class="social-icons">
+                    <a href="https://wa.me/5511984651912" aria-label="WhatsApp" data-track="whatsapp_rodape" data-wa-origin="rodape" data-wa-msg="Olá! Vim pelo site."><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+                    <a href="https://www.instagram.com/flow.confeccoes/" aria-label="Instagram"><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                </div>
+                <nav class="footer-links" aria-label="Links do rodapé">
+                    <a href="confeccao.html">Peça pronta</a>
+                    <a href="privacidade.html">Política de privacidade</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <div class="rights-reserved">
+        <p>© 2025 Flow Estamparia.<br> All rights reserved.</p>
+    </div>
+
+    <a href="https://wa.me/5511984651912" class="link-zap" aria-label="Falar no WhatsApp" data-track="whatsapp_flutuante" data-wa-origin="float" data-wa-msg="Olá! Quero falar sobre estampa em silk.">
+        <svg enable-background="new 0 0 512 512" width="60" height="60" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M256.064,0h-0.128l0,0C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104  l98.4-31.456C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z" fill="#25D366"></path><path d="m405.02 361.5c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.62-127.46-112.58-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016 0.16 8.576 0.288 7.52 0.32 11.296 0.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744s-7.36 7.68-11.136 12.352c-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z" fill="#FAFAFA"></path></svg>
+    </a>
+
+    <!-- Modal: coletor de briefing para estampa em corte -->
+    <div class="modal-backdrop" id="briefingModal" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="briefingModalTitle" aria-describedby="briefingModalDesc">
+            <button type="button" class="modal-close" aria-label="Fechar" data-close-modal>
+                <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </button>
+            <div class="modal-icon" aria-hidden="true">
+                <svg viewBox="0 0 576 512" fill="currentColor" focusable="false"><path d="M248 0L208 0c-26.5 0-48 21.5-48 48l0 112c0 35.3 28.7 64 64 64l128 0c35.3 0 64-28.7 64-64l0-112c0-26.5-21.5-48-48-48L328 0l0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80zM64 256c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l160 0c35.3 0 64-28.7 64-64l0-128c0-35.3-28.7-64-64-64l-40 0 0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80-40 0zM352 512l160 0c35.3 0 64-28.7 64-64l0-128c0-35.3-28.7-64-64-64l-40 0 0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80-40 0c-15 0-28.8 5.1-39.7 13.8c4.9 10.4 7.7 22 7.7 34.2l0 160c0 12.2-2.8 23.8-7.7 34.2C323.2 506.9 337 512 352 512z"/></svg>
+            </div>
+            <h3 class="modal-title" id="briefingModalTitle">Envie sua arte e receba o preço por peça</h3>
+            <div class="modal-body" id="briefingModalDesc">
+                <p>Cada arte tem um número de telas, um tamanho e uma cobertura diferentes — por isso o preço da estampa é fechado depois da análise, não por calculadora.</p>
+                <p><strong>Estampa em corte: R$ 1 a R$ 7 por peça</strong>, conforme cores e tamanho da estampa. Mínimo de 300 peças.</p>
+                <p>Para receber o valor exato hoje ainda, envie:</p>
+                <ul class="modal-list">
+                    <li>a arte e número de cores</li>
+                    <li>a quantidade de peças;</li>
+                    <li>o tipo de tecido;</li>
+                    <li>o prazo desejado.</li>
+                </ul>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="whatsapp-btn modal-wpp" id="briefingModalWpp">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+                    </svg>
+                    Enviar pelo WhatsApp
+                </button>
+                <button type="button" class="modal-back" data-close-modal>Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Flow Estamparia",
+      "description": "Estamparia de serigrafia em mesa corrida para confecções, facções, marcas e uniformistas. Estampa em corte, em tecido e em peça pronta, com prazo de 1 a 3 dias úteis. Pedido mínimo de 300 peças por arte.",
+      "image": "https://[[PREENCHER: DOMINIO]]/images/hero-silk.webp",
+      "logo": "https://[[PREENCHER: DOMINIO]]/images/logo.png",
+      "url": "https://[[PREENCHER: DOMINIO]]/",
+      "telephone": "+55 11 98465-1912",
+      "email": "flowconfeccoes@gmail.com",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Sebastião Lopes Grandio, 31, Jardim Nélia",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "São Paulo" },
+        { "@type": "Place", "name": "Grande São Paulo" }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/flow.confeccoes/",
+        "https://wa.me/5511984651912"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Estampa em silk sobre corte em mesa corrida",
+      "serviceType": "Serigrafia em mesa corrida sobre corte, tecido e peça pronta",
+      "description": "Serigrafia em mesa corrida para confecções, facções, marcas próprias e uniformistas. O cliente entrega o corte, o tecido ou a peça pronta e recebe estampado em 1 a 3 dias úteis. Capacidade de até 1.200 peças por dia, até 6 cores por arte, estampa de até 60 x 60 cm. Pedido mínimo de 300 peças.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Flow Estamparia",
+        "url": "https://[[PREENCHER: DOMINIO]]/",
+        "telephone": "+55 11 98465-1912",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Sebastião Lopes Grandio, 31, Jardim Nélia",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        }
+      },
+      "areaServed": [
+        { "@type": "City", "name": "São Paulo" },
+        { "@type": "Place", "name": "Grande São Paulo" }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Confecções, facções, marcas próprias, uniformistas e lojistas"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vocês estampam o meu corte ou só peça pronta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estampamos o seu corte, o seu tecido e a sua peça pronta. É o nosso serviço principal: você entrega o material e recebe de volta estampado. Se você não tem o corte, também produzimos a peça inteira — nesse caso, veja a página de peça pronta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o pedido mínimo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "300 peças por arte. A serigrafia compensa no volume: o custo das telas é fixo e se dilui na quantidade, então quanto maior o lote, menor o valor por peça."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a capacidade por dia e o prazo por faixa de volume?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A mesa corrida faz até 1.200 peças por dia. A estampa em corte fica pronta em 1 a 3 dias úteis conforme o volume, contados da aprovação da arte e da chegada do material. Para lotes acima da capacidade diária, o prazo é fechado junto com o orçamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o pagamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "50% na aprovação da arte e 50% na retirada. A gente só grava tela e reserva mesa depois do seu aceite na prova."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o custo por cor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cada cor da sua arte exige uma tela exclusiva, gravada só para o seu pedido. Uma arte de três cores usa três telas. Por isso o orçamento separa o custo das telas do valor por peça. Estampamos até 6 cores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso ter a arte pronta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ajuda, mas não é obrigatório. Trabalhamos com arte em vetor; se a sua estiver em outro formato, avaliamos e ajustamos antes de gravar as telas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o tamanho máximo de estampa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "60 x 60 cm. Acima disso, mande a arte que a gente avalia junto o melhor jeito de dividir ou reposicionar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês estampam poliéster?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Poliéster pede atenção com migração de cor: o corante do tecido pode subir e manchar a estampa dias depois, principalmente em peça escura com estampa clara. Por isso testamos numa peça piloto do seu próprio lote antes de rodar. Também estampamos algodão, PA e malha fria."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fazem peça piloto antes de rodar o lote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sempre, e ela sai do seu próprio lote — não de uma peça de amostra nossa. Você recebe a foto da piloto e a mesa só roda depois do seu OK."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se acontecer algum problema com o meu corte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É exatamente para isso que existe a peça piloto: qualquer ajuste de posição, cor ou tamanho é resolvido nela, não com o lote inteiro já impresso. Na saída conferimos peça por peça, e o que sair fora do padrão é separado antes da entrega."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Emitem nota fiscal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, emitimos nota fiscal quando o cliente solicita."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="js/attribution.js"></script>
+    <script src="js/tracking.js"></script>
+    <script src="js/briefing-modal.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/portfolio-carousel.js"></script>
+    <script src="js/process-carousel.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/anim.js"></script>
+
+</body></html>

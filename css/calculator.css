@@ -1,0 +1,336 @@
+.calculator {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f5f5f5 0%, #e8e8e8 100%);
+    padding: clamp(3rem, 8vh, 5rem) 0 clamp(4rem, 10vh, 6rem);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, 
+                rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    display: flex;
+    align-items: center;
+}
+
+.calculator-container {
+    max-width: 520px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.5rem, 4vh, 2rem);
+}
+
+.calculator-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-weight: 900;
+    color: #1a1a1a;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.calculator-title-underline {
+    width: clamp(180px, 50%, 270px);
+    height: 5px;
+    background-color: var(--primary-yellow);
+    border-radius: 3px;
+    margin-top: -0.5rem;
+}
+
+.calculator-description {
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+    font-weight: 400;
+    color: #4a4a4a;
+    text-align: center;
+    line-height: 1.65;
+    max-width: 95%;
+}
+
+.calculator-form-wrapper {
+    width: 100%;
+    margin-top: clamp(1.5rem, 4vh, 2rem);
+}
+
+.calculator-form {
+    background: #ffffff;
+    padding: clamp(2rem, 6vw, 3rem);
+    border-radius: clamp(16px, 4vw, 24px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12),
+                0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: clamp(1.5rem, 4vh, 2rem);
+}
+
+/* .btn-pill e .whatsapp-btn moveram para css/buttons.css — são usados também
+   pelo modal de briefing e pelo CTA do hero, em páginas sem calculadora. */
+
+.form-group label {
+    display: block;
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    font-size: clamp(1rem, 3.5vw, 1.15rem);
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: clamp(14px, 4vw, 16px);
+    border: 2px solid #e0e0e0;
+    border-radius: clamp(10px, 2.5vw, 12px);
+    font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a1a;
+    background: #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%231a1a1a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 45px;
+}
+
+.form-group input {
+    background-image: none;
+    padding-right: 16px;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.15);
+}
+
+.form-group select:focus-visible,
+.form-group input:focus-visible {
+    outline: 3px solid var(--primary-yellow);
+    outline-offset: 2px;
+}
+
+.form-group select.error,
+.form-group input.error {
+    border-color: #d93025;
+    box-shadow: 0 0 0 3px rgba(217, 48, 37, 0.12);
+}
+
+.field-hint {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: clamp(0.8rem, 2.8vw, 0.88rem);
+    color: #666666;
+}
+
+.field-error {
+    display: none;
+    margin-top: 0.5rem;
+    font-size: clamp(0.8rem, 2.8vw, 0.88rem);
+    font-weight: 600;
+    color: #d93025;
+}
+
+.field-error.visible {
+    display: block;
+}
+
+.price-display {
+    background: var(--primary-yellow);
+    padding: clamp(1.8rem, 5vw, 2.5rem);
+    border-radius: clamp(14px, 3.5vw, 18px);
+    text-align: center;
+    margin: clamp(2rem, 5vh, 2.5rem) 0;
+}
+
+.price-display h3 {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+}
+
+.price-value {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    font-weight: 900;
+    color: #000000;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.price-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.price-breakdown small {
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.price-breakdown small span {
+    font-weight: 700;
+}
+
+.summary {
+    background: #f8f8f8;
+    padding: clamp(1.5rem, 4vw, 2rem);
+    border-radius: clamp(12px, 3vw, 16px);
+    margin: clamp(1.5rem, 4vh, 2rem) 0;
+    border: 2px solid #e8e8e8;
+}
+
+.summary h4 {
+    color: #1a1a1a;
+    font-size: clamp(1.1rem, 4vw, 1.25rem);
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(0.7rem, 2vh, 0.9rem) 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item span {
+    color: #666666;
+    font-weight: 400;
+}
+
+.summary-item strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Premissas do cálculo, logo abaixo do resultado */
+.calc-assumptions {
+    margin: clamp(1rem, 3vh, 1.4rem) 0 clamp(1.5rem, 4vh, 2rem);
+    padding: clamp(1rem, 3vw, 1.2rem);
+    background: #f8f8f8;
+    border: 1px solid #e8e8e8;
+    border-left: 4px solid var(--primary-yellow);
+    border-radius: clamp(10px, 2.5vw, 12px);
+}
+
+.calc-assumptions p {
+    font-size: clamp(0.82rem, 2.9vw, 0.9rem);
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 0.5rem;
+}
+
+.calc-assumptions p:last-child {
+    margin-bottom: 0;
+}
+
+.calc-assumptions strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .calculator-container {
+        max-width: 680px;
+    }
+
+    .calculator-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+    }
+
+    .calculator-description {
+        font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+        max-width: 85%;
+    }
+
+    .calculator-form {
+        padding: 3rem;
+    }
+
+    .form-group select,
+    .form-group input {
+        font-size: 1.05rem;
+    }
+
+    .price-value {
+        font-size: 3.8rem;
+    }
+}
+
+/* Desktop: seção sem 100vh e calculadora de camisetas em 2 colunas */
+@media (min-width: 1024px) {
+    .calculator {
+        min-height: auto;
+        padding: 6rem 0;
+    }
+
+    .calculator-container {
+        max-width: 960px;
+    }
+
+    .calculator-title {
+        font-size: clamp(2.5rem, 3.2vw, 3rem);
+    }
+
+    .calculator-description {
+        font-size: 1.2rem;
+        max-width: 720px;
+    }
+
+    .calculator-form {
+        padding: 3rem 3.5rem;
+    }
+
+    .form-group input {
+        font-size: 1.05rem;
+        padding: 16px;
+    }
+
+    /* Camisetas: campos à esquerda, resumo/valor/botão à direita (sticky) */
+    .shirt-calc {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    .shirt-fields {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shirt-fields .form-group:last-child {
+        margin-bottom: 0;
+    }
+
+    .shirt-result {
+        position: sticky;
+        top: calc(var(--header-height) + 2rem);
+    }
+
+    .shirt-result .price-display {
+        margin-top: 0;
+    }
+
+    .price-value {
+        font-size: 3.4rem;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+    .calculator-container {
+        max-width: 1000px;
+    }
+}

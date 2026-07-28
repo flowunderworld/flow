@@ -1,0 +1,303 @@
+
+.services {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f5f5f5 0%, #e8e8e8 100%);
+    padding: clamp(3rem, 8vh, 5rem) 0 clamp(4rem, 10vh, 6rem);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, 
+                rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-container {
+    max-width: 520px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.5rem, 4vh, 2rem);
+}
+
+.services-title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-weight: 900;
+    color: #1a1a1a;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.services-title-underline {
+    width: clamp(180px, 50%, 270px);
+    height: 5px;
+    background-color: var(--primary-yellow);
+    border-radius: 3px;
+    margin-top: -0.5rem;
+}
+
+.service-icon i {
+    font-size: clamp(35px, 9vw, 50px);
+    color: #1a1a1a;
+}
+
+.services-description {
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+    font-weight: 400;
+    color: #4a4a4a;
+    text-align: center;
+    line-height: 1.65;
+    max-width: 95%;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    margin-top: clamp(2rem, 5vh, 3rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 4vh, 2.5rem);
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    touch-action: pan-y pinch-zoom;
+}
+
+.service-card {
+    min-width: 100%;
+    background: #ffffff;
+    border-radius: clamp(16px, 4vw, 24px);
+    padding: clamp(2rem, 6vw, 3rem) clamp(1.5rem, 5vw, 2.5rem);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12),
+                0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.2rem, 3vh, 1.8rem);
+    text-align: center;
+    opacity: 0.6;
+    transform: scale(0.95);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card.active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15),
+                0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: clamp(70px, 18vw, 100px);
+    height: clamp(70px, 18vw, 100px);
+    background: linear-gradient(135deg, var(--primary-yellow) 0%, #ffd740 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(245, 197, 24, 0.3);
+}
+
+.service-icon svg {
+    width: 55%;
+    height: 55%;
+    color: #1a1a1a;
+}
+
+.service-card-title {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.service-card-description {
+    font-size: clamp(0.92rem, 3.5vw, 1.05rem);
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.7;
+    max-width: 90%;
+}
+
+.carousel-bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 3vw, 14px);
+}
+
+.bullet {
+    width: clamp(10px, 2.5vw, 12px);
+    height: clamp(10px, 2.5vw, 12px);
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+}
+
+.bullet:hover {
+    background-color: #999999;
+    transform: scale(1.15);
+}
+
+.bullet.active {
+    background-color: var(--primary-yellow);
+    width: clamp(30px, 8vw, 40px);
+    border-radius: clamp(6px, 1.5vw, 8px);
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .services-container {
+        max-width: 680px;
+    }
+
+    .services-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+    }
+
+    .services-description {
+        font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+        max-width: 85%;
+    }
+
+    .service-card {
+        padding: 3rem 3rem;
+    }
+
+    .service-card-title {
+        font-size: 1.9rem;
+    }
+
+    .service-card-description {
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop: carrossel vira grade 3x2 (JS desativa a lógica via matchMedia) */
+@media (min-width: 1024px) {
+    .services {
+        min-height: auto;
+        padding: 6rem 0;
+    }
+
+    .services-container {
+        max-width: var(--content-max);
+    }
+
+    .services-title {
+        font-size: clamp(2.5rem, 3.2vw, 3rem);
+    }
+
+    .services-description {
+        font-size: 1.2rem;
+        max-width: 720px;
+    }
+
+    .carousel {
+        overflow: visible;
+    }
+
+    .carousel-track {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.8rem;
+        transform: none !important;
+    }
+
+    .service-card {
+        min-width: 0;
+        width: auto;
+        padding: 2.6rem 2rem;
+        opacity: 1;
+        transform: none;
+    }
+
+    .service-icon {
+        width: 96px;
+        height: 96px;
+    }
+
+    .service-card-title {
+        font-size: 1.5rem;
+    }
+
+    .service-card-description {
+        font-size: 1.02rem;
+        max-width: 90%;
+    }
+
+    .carousel-bullets {
+        display: none;
+    }
+}
+
+/* Elevação no hover (apenas dispositivos com mouse, no desktop) */
+@media (hover: hover) and (min-width: 1024px) {
+    .service-card {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16),
+                    0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* ==========================================================================
+   Mobile/tablet (< 1024px): sombra dos cards de serviço
+   Corrige o recorte da própria sombra e o vazamento da sombra dos cards
+   vizinhos causados pelo overflow:hidden do .carousel.
+   O desktop (>= 1024px) permanece inalterado.
+   ========================================================================== */
+@media (max-width: 1023.98px) {
+
+    /* Cards inativos sem sombra: é o que impede o vazamento lateral.
+       Eles já são secundários por opacity: .6 e scale(.95). */
+    .service-card {
+        box-shadow: none;
+    }
+
+    /* Sombra vertical, com spread negativo para não se projetar para os lados. */
+    .service-card.active {
+        box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.22),
+                    0 4px 10px -6px rgba(0, 0, 0, 0.14);
+    }
+
+    /* Recorta apenas na horizontal e libera o eixo vertical para a sombra.
+       Sob @supports porque, sem suporte a overflow:clip, o par
+       overflow-x:hidden + overflow-y:visible faz o visible computar como auto
+       — e aí apareceria justamente a barra de rolagem que queremos evitar.
+       Sem o @supports, .carousel mantém o overflow:hidden da regra base. */
+    @supports (overflow: clip) {
+        .carousel {
+            overflow-x: clip;
+            overflow-y: visible;
+        }
+    }
+
+    /* Navegadores sem overflow:clip (Safari < 16): abre espaço para a sombra
+       renderizar dentro da caixa de clipe. Só no eixo vertical — padding
+       horizontal estreitaria o card e desalinharia o translateX por slide. */
+    @supports not (overflow: clip) {
+        .carousel {
+            padding-block: 4px 22px;
+        }
+    }
+}

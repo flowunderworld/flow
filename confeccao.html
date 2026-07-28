@@ -1,0 +1,470 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte Poppins via link (substitui o @import, que serializava o download) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap">
+
+    <!-- Preload do LCP (imagem de fundo do hero) -->
+    <link rel="preload" as="image" href="images/hero-silk.webp">
+
+    <title>Confecção de Camiseta com Estampa em Silk | Peça Pronta | Flow</title>
+    <meta name="description" content="Camiseta, polo e moletom confeccionados e estampados em silk. Para empresa, evento e marca que precisa do produto pronto. Orçamento na hora. Mínimo 30 peças.">
+    <link rel="canonical" href="https://[[PREENCHER: DOMINIO]]/confeccao.html">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Confecção de Camiseta com Estampa em Silk | Peça Pronta | Flow">
+    <meta property="og:description" content="Camiseta, polo e moletom confeccionados e estampados em silk. Para empresa, evento e marca que precisa do produto pronto. Mínimo 30 peças.">
+    <meta property="og:image" content="https://[[PREENCHER: DOMINIO]]/images/hero-silk.webp">
+    <meta property="og:url" content="https://[[PREENCHER: DOMINIO]]/confeccao.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Google Tag (gtag.js) — DESATIVADO ATÉ OS IDs EXISTIREM.
+         Com o placeholder no lugar do ID, o navegador faz uma requisição 404 a
+         cada pageview e nada é medido. Para ativar: substitua os dois tokens
+         abaixo pelos IDs reais e remova este comentário.
+         [[PREENCHER: GA4_ID]]  ·  [[PREENCHER: GOOGLE_ADS_ID]]
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA4_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA4_ID');
+        gtag('config', 'GOOGLE_ADS_ID');
+    </script>
+    -->
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/notice.css">
+    <link rel="stylesheet" href="css/custom-select.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Flow Estamparia" class="logo-img" width="76" height="36" decoding="async"></a>
+            </div>
+            <nav class="header-nav" aria-label="Navegação principal">
+                <a href="index.html" class="header-nav-link">Estampa em corte</a>
+                <a href="#calculator" class="header-nav-link">Orçamento</a>
+                <a href="#products" class="header-nav-link">Produtos</a>
+                <a href="#faq" class="header-nav-link">Dúvidas</a>
+            </nav>
+            <button type="button" class="btn-orcamento" data-open-briefing-modal data-wa-origin="confeccao-header" data-wa-msg="Olá! Quero estampar em corte. Vou enviar a arte.">
+                Enviar arte
+            </button>
+        </div>
+    </header>
+
+    <section class="hero hero-sub">
+        <div class="hero-container">
+            <p class="hero-kicker">Peça pronta · Confecção completa com estampa em silk · São Paulo</p>
+            <h1 class="hero-title">Não tem o corte?<br>A gente produz a peça inteira.</h1>
+            <p class="hero-subtitle">Camiseta, polo e moletom confeccionados e estampados em silk, para empresa, evento e marca que precisa do produto pronto.</p>
+        </div>
+    </section>
+
+    <section class="notice" id="prazo">
+        <div class="notice-container">
+            <p class="notice-text">
+                <strong>Confecção completa leva 20 dias úteis</strong>, porque envolve compra de tecido, corte e costura. Se você já tem o corte, a estampa sai em <strong>1 a 3 dias úteis</strong>.
+            </p>
+            <a href="index.html" class="notice-link">
+                Ver estampa em corte
+                <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 0 45.3 0l160-160z"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <section class="calculator" id="calculator">
+        <div class="calculator-container">
+            <h2 class="calculator-title">Calculadora de Orçamento</h2>
+            <div class="calculator-title-underline"></div>
+            <p class="calculator-description">
+                Configure a peça e receba uma estimativa na hora. O valor final é confirmado depois da análise da arte.
+            </p>
+
+            <div class="calculator-form-wrapper">
+                <form id="budgetForm" class="calculator-form">
+                    <div class="shirt-calc" id="shirtCalc">
+                        <div class="shirt-fields">
+                            <div class="form-group">
+                                <label id="productLabel" for="product">Tipo de Produto</label>
+                                <select id="product" required aria-describedby="productError" data-custom-select>
+                                    <option value="">Selecione...</option>
+                                    <option value="p1">Camiseta Poliéster</option>
+                                    <option value="p2">Camiseta Malha Fria</option>
+                                    <option value="p3">Camiseta Algodão 30.1</option>
+                                    <option value="p4">Camiseta Polo Piquet PA</option>
+                                    <option value="p5">Camiseta Oversized</option>
+                                    <option value="p6">Moletom</option>
+                                    <option value="p7">Moletom com Touca</option>
+                                </select>
+                                <span class="field-error" id="productError" role="alert">Selecione um tipo de produto.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label id="colorsLabel" for="colors">Número de Cores na Estampa</label>
+                                <select id="colors" required aria-describedby="colorsError" data-custom-select>
+                                    <option value="">Selecione...</option>
+                                    <option value="1">1 Cor</option>
+                                    <option value="2">2 Cores</option>
+                                    <option value="3">3 Cores</option>
+                                    <option value="4">4 Cores</option>
+                                    <option value="5">5 Cores</option>
+                                    <option value="6">6 Cores</option>
+                                </select>
+                                <span class="field-error" id="colorsError" role="alert">Selecione o número de cores.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label id="locationsLabel" for="locations">Locais de Estampa</label>
+                                <select id="locations" required aria-describedby="locationsHint locationsError" data-custom-select>
+                                    <option value="">Selecione...</option>
+                                    <option value="frente">Frente</option>
+                                    <option value="costas">Costas</option>
+                                    <option value="manga">Manga</option>
+                                    <option value="frente-costas">Frente + Costas</option>
+                                </select>
+                                <small class="field-hint" id="locationsHint">Cada local usa uma tela por cor. Frente + costas dobra o número de telas.</small>
+                                <span class="field-error" id="locationsError" role="alert">Selecione onde a estampa vai.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="quantity">Quantidade de Peças</label>
+                                <input type="number" id="quantity" min="30" value="30" required aria-describedby="quantityHint quantityError">
+                                <small class="field-hint" id="quantityHint">Pedido mínimo de 30 peças por arte.</small>
+                                <span class="field-error" id="quantityError" role="alert">Nosso pedido mínimo é de 30 peças.</span>
+                            </div>
+                        </div><!-- /.shirt-fields -->
+
+                        <div class="shirt-result">
+                            <div class="price-display">
+                                <h3>Estimativa a partir de</h3>
+                                <div class="price-value" id="totalPrice">R$ 0,00</div>
+                                <div class="price-breakdown">
+                                    <small>Custo das telas: <span id="screensCost">R$ 0,00</span></small>
+                                    <small>Valor das peças: <span id="piecesCost">R$ 0,00</span></small>
+                                </div>
+                            </div>
+
+                            <div class="calc-assumptions">
+                                <p><strong>O que esta estimativa considera:</strong></p>
+                                <p>Peça de <strong>cor clara</strong>. Peça escura exige base branca, que é uma tela a mais por local de estampa.</p>
+                                <p>Grade de tamanhos padrão (<strong>P ao GG</strong>). Tamanhos especiais são cotados à parte.</p>
+                                <p>Valor final confirmado após a análise da arte, porque tamanho e cobertura da estampa mudam o custo de impressão.</p>
+                            </div>
+
+                            <div class="summary" id="summary" style="display: none;">
+                                <h4>Resumo do Pedido</h4>
+                                <div class="summary-item">
+                                    <span>Produto:</span>
+                                    <strong id="summaryProduct">-</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Quantidade:</span>
+                                    <strong id="summaryQuantity">-</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Cores:</span>
+                                    <strong id="summaryColors">-</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Locais de estampa:</span>
+                                    <strong id="summaryLocations">-</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Telas:</span>
+                                    <strong id="summaryScreens">-</strong>
+                                </div>
+                            </div>
+
+                            <button type="button" class="whatsapp-btn" id="whatsappBtn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+                                </svg>
+                                Enviar Orçamento pelo WhatsApp
+                            </button>
+                        </div><!-- /.shirt-result -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <h2 class="faq-title">Perguntas frequentes</h2>
+            <div class="faq-title-underline"></div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-1" id="faq-btn-1">
+                        <span>Por que a confecção leva 20 dias úteis?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" aria-hidden="true">
+                        <p>Porque são três etapas antes da estampa: comprar o tecido, cortar e costurar. Cada uma tem o seu tempo e nenhuma começa antes da anterior terminar. A estampa em si é a parte rápida — leva 1 a 3 dias úteis.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
+                        <span>Qual o pedido mínimo da confecção?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" aria-hidden="true">
+                        <p>30 peças por arte. Para estampa em corte, sem confecção, o mínimo é 300 peças.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
+                        <span>Eu já tenho o corte. Compensa pedir a confecção?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" aria-hidden="true">
+                        <p>Não. Se o corte já é seu, você paga só pela estampa e recebe em 1 a 3 dias úteis em vez de 20. Essa é a nossa operação principal — veja a página de estampa em corte.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4">
+                        <span>A calculadora dá o valor final?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" aria-hidden="true">
+                        <p>Não, ela dá uma estimativa a partir de. O valor fecha depois da análise da arte, porque tamanho e cobertura da estampa mudam o tempo de impressão. A estimativa considera peça de cor clara: peça escura precisa de base branca, que é uma tela a mais por local.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-5" id="faq-btn-5">
+                        <span>Como a serigrafia é feita, na prática?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" aria-hidden="true">
+                        <p>Em camadas. Cada estampa é construída em etapas, uma cor de cada vez, com o tempo de secagem entre elas. É esse trabalho por camada que faz o detalhe ficar nítido e o acabamento ficar parelho do começo ao fim do lote.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-6" id="faq-btn-6">
+                        <span>Por que cada cor exige uma tela?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-6" role="region" aria-labelledby="faq-btn-6" aria-hidden="true">
+                        <p>Porque a tela é o molde de uma cor só: ela deixa passar a tinta exatamente onde aquela cor aparece na arte. Uma arte de três cores usa três telas, gravadas só para o seu pedido. Por isso o orçamento separa o custo das telas do valor por peça — as telas são custo fixo e se diluem no volume.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-7" id="faq-btn-7">
+                        <span>Fazem peça piloto antes de rodar o lote?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-7" role="region" aria-labelledby="faq-btn-7" aria-hidden="true">
+                        <p>Sempre. Na confecção a piloto é a peça inteira — tecido, modelagem e estampa definitivos. Você aprova antes de o lote começar.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-8" id="faq-btn-8">
+                        <span>Como funciona o pagamento?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-8" role="region" aria-labelledby="faq-btn-8" aria-hidden="true">
+                        <p>50% na aprovação da arte e da peça piloto, 50% na retirada.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-panel-9" id="faq-btn-9">
+                        <span>Emitem nota fiscal?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer" id="faq-panel-9" role="region" aria-labelledby="faq-btn-9" aria-hidden="true">
+                        <p>Sim, emitimos nota fiscal em todo pedido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="new-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>Estampa em corte,<br> em tecido <br> e em peça pronta. <br> Mesa corrida em São Paulo.</h2>
+            </div>
+            <div class="footer-column">
+                <h3>SÃO PAULO - ITAIM PAULISTA</h3>
+                <p><a href="mailto:flowconfeccoes@gmail.com">flowconfeccoes@gmail.com</a></p>
+                <p><a href="tel:+5511984651912">+55 11 98465-1912</a></p>
+                <p>Segunda a sexta, das 08h às 18h</p>
+                <address>
+                    Rua Sebastião Lopes Grandio,<br>
+                   31, Jardim Nélia
+                </address>
+                <!-- CNPJ ainda em desenvolvimento — quando sair, incluir aqui: [[PREENCHER: CNPJ]] -->
+                <p><a href="https://maps.app.goo.gl/QVHovHkV28zMtytw7" target="_blank" rel="noopener" class="map-link">Veja no mapa<svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-128c0-17.7-14.3-32-32-32L352 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></svg></a></p>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="follow-us">Siga-nos</h3>
+                <div class="social-icons">
+                    <a href="https://wa.me/5511984651912" aria-label="WhatsApp" data-track="whatsapp_rodape" data-wa-origin="rodape" data-wa-msg="Olá! Vim pelo site."><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+                    <a href="https://www.instagram.com/flow.confeccoes/" aria-label="Instagram"><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                </div>
+                <nav class="footer-links" aria-label="Links do rodapé">
+                    <a href="index.html">Estampa em corte</a>
+                    <a href="privacidade.html">Política de privacidade</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <div class="rights-reserved">
+        <p>© 2025 Flow Estamparia.<br> All rights reserved.</p>
+    </div>
+
+    <a href="https://wa.me/5511984651912" class="link-zap" aria-label="Falar no WhatsApp" data-track="whatsapp_flutuante" data-wa-origin="float" data-wa-msg="Olá! Quero falar sobre estampa em silk.">
+        <svg enable-background="new 0 0 512 512" width="60" height="60" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M256.064,0h-0.128l0,0C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104  l98.4-31.456C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z" fill="#25D366"></path><path d="m405.02 361.5c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.62-127.46-112.58-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016 0.16 8.576 0.288 7.52 0.32 11.296 0.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744s-7.36 7.68-11.136 12.352c-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z" fill="#FAFAFA"></path></svg>
+    </a>
+
+    <!-- Modal: coletor de briefing para estampa em corte -->
+    <div class="modal-backdrop" id="briefingModal" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="briefingModalTitle" aria-describedby="briefingModalDesc">
+            <button type="button" class="modal-close" aria-label="Fechar" data-close-modal>
+                <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </button>
+            <div class="modal-icon" aria-hidden="true">
+                <svg viewBox="0 0 576 512" fill="currentColor" focusable="false"><path d="M248 0L208 0c-26.5 0-48 21.5-48 48l0 112c0 35.3 28.7 64 64 64l128 0c35.3 0 64-28.7 64-64l0-112c0-26.5-21.5-48-48-48L328 0l0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80zM64 256c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l160 0c35.3 0 64-28.7 64-64l0-128c0-35.3-28.7-64-64-64l-40 0 0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80-40 0zM352 512l160 0c35.3 0 64-28.7 64-64l0-128c0-35.3-28.7-64-64-64l-40 0 0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80-40 0c-15 0-28.8 5.1-39.7 13.8c4.9 10.4 7.7 22 7.7 34.2l0 160c0 12.2-2.8 23.8-7.7 34.2C323.2 506.9 337 512 352 512z"/></svg>
+            </div>
+            <h3 class="modal-title" id="briefingModalTitle">Envie sua arte e receba o preço por peça</h3>
+            <div class="modal-body" id="briefingModalDesc">
+                <p>Cada arte tem um número de telas, um tamanho e uma cobertura diferentes — por isso o preço da estampa é fechado depois da análise, não por calculadora.</p>
+                <p><strong>Estampa em corte: R$ 1 a R$ 7 por peça</strong>, conforme cores e tamanho da estampa. Mínimo de 300 peças.</p>
+                <p>Para receber o valor exato hoje ainda, envie:</p>
+                <ul class="modal-list">
+                    <li>a arte (PDF, AI, EPS, CDR ou PNG em alta);</li>
+                    <li>a quantidade de peças;</li>
+                    <li>o número de cores;</li>
+                    <li>o tipo de tecido;</li>
+                    <li>se é corte ou peça pronta;</li>
+                    <li>o prazo desejado.</li>
+                </ul>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="whatsapp-btn modal-wpp" id="briefingModalWpp">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+                    </svg>
+                    Enviar pelo WhatsApp
+                </button>
+                <button type="button" class="modal-back" data-close-modal>Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Por que a confecção leva 20 dias úteis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque são três etapas antes da estampa: comprar o tecido, cortar e costurar. Cada uma tem o seu tempo e nenhuma começa antes da anterior terminar. A estampa em si é a parte rápida — leva 1 a 3 dias úteis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual o pedido mínimo da confecção?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "30 peças por arte. Para estampa em corte, sem confecção, o mínimo é 300 peças."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Eu já tenho o corte. Compensa pedir a confecção?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Se o corte já é seu, você paga só pela estampa e recebe em 1 a 3 dias úteis em vez de 20. Essa é a nossa operação principal — veja a página de estampa em corte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A calculadora dá o valor final?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não, ela dá uma estimativa a partir de. O valor fecha depois da análise da arte, porque tamanho e cobertura da estampa mudam o tempo de impressão. A estimativa considera peça de cor clara: peça escura precisa de base branca, que é uma tela a mais por local."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como a serigrafia é feita, na prática?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Em camadas. Cada estampa é construída em etapas, uma cor de cada vez, com o tempo de secagem entre elas. É esse trabalho por camada que faz o detalhe ficar nítido e o acabamento ficar parelho do começo ao fim do lote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que cada cor exige uma tela?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque a tela é o molde de uma cor só: ela deixa passar a tinta exatamente onde aquela cor aparece na arte. Uma arte de três cores usa três telas, gravadas só para o seu pedido. Por isso o orçamento separa o custo das telas do valor por peça — as telas são custo fixo e se diluem no volume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fazem peça piloto antes de rodar o lote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sempre. Na confecção a piloto é a peça inteira — tecido, modelagem e estampa definitivos. Você aprova antes de o lote começar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona o pagamento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "50% na aprovação da arte e da peça piloto, 50% na retirada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Emitem nota fiscal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, emitimos nota fiscal em todo pedido."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="js/attribution.js"></script>
+    <script src="js/tracking.js"></script>
+    <script src="js/custom-select.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/briefing-modal.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/anim.js"></script>
+
+</body></html>

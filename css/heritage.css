@@ -1,0 +1,115 @@
+/* Bloco "terceira geração" — texto em primeira pessoa + vídeo da mesa corrida.
+   Substitui a prova social numérica: para este público o vídeo da mesa prova
+   capacidade instantaneamente e não pode ser inventado. */
+
+.heritage {
+    width: 100%;
+    background: #000000;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: clamp(3rem, 8vh, 5rem) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.heritage-container {
+    max-width: 520px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.8rem, 5vh, 2.5rem);
+}
+
+.heritage-text {
+    font-size: clamp(1.05rem, 4vw, 1.3rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+.heritage-signature {
+    display: block;
+    margin-top: 0.9rem;
+    font-size: clamp(0.8rem, 2.8vw, 0.9rem);
+    font-style: normal;
+    font-weight: 600;
+    color: var(--primary-yellow);
+}
+
+.heritage-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: clamp(14px, 3.5vw, 20px);
+    overflow: hidden;
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.heritage-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Placeholder enquanto o vídeo da mesa não é entregue.
+   Sai sozinho quando o <video> tiver um <source> válido. */
+.heritage-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    text-align: center;
+    padding: 1.5rem;
+    background: repeating-linear-gradient(
+        45deg,
+        #131313,
+        #131313 12px,
+        #191919 12px,
+        #191919 24px
+    );
+    color: #8a8a8a;
+    font-size: clamp(0.8rem, 2.8vw, 0.92rem);
+    line-height: 1.5;
+}
+
+.heritage-placeholder svg {
+    width: clamp(34px, 9vw, 44px);
+    height: clamp(34px, 9vw, 44px);
+    color: var(--primary-yellow);
+    opacity: 0.55;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .heritage-container {
+        max-width: 680px;
+    }
+}
+
+/* Desktop: texto e vídeo lado a lado */
+@media (min-width: 1024px) {
+    .heritage-container {
+        max-width: var(--content-max);
+        flex-direction: row;
+        align-items: center;
+        gap: 3.5rem;
+    }
+
+    .heritage-body {
+        flex: 1;
+    }
+
+    .heritage-media {
+        flex: 1;
+    }
+
+    .heritage-text {
+        font-size: 1.35rem;
+    }
+}

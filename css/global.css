@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 70px;
+    --primary-yellow: #f5c518;
+    --text-light: #ffffff;
+    --text-secondary: #e5e5e5;
+    --bg-dark: #000000;
+    --content-max: 1200px;
+    /* Paleta do rodapé (antes indefinidas — quebravam o footer) */
+    --accent: #000000;
+    --background-color: #ffffff;
+    --primary-color: #f5c518;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-light);
+    background-color: var(--bg-dark);
+    overflow-x: hidden;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Acessibilidade: foco visível global (só para navegação por teclado) */
+:focus-visible {
+    outline: 3px solid var(--primary-yellow);
+    outline-offset: 2px;
+}
+
+/* Utilidades */
+.container {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --header-height: 75px;
+    }
+    
+    .container {
+        max-width: 720px;
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --header-height: 80px;
+    }
+    
+    .container {
+        max-width: 960px;
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Botão flutuante do WhatsApp (position movida do inline HTML) */
+.link-zap {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 1200;
+    line-height: 0;
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease;
+}
+
+.link-zap:hover {
+    transform: scale(1.06);
+}
+
+.link-zap:focus-visible {
+    outline: 3px solid var(--primary-yellow);
+    outline-offset: 3px;
+}
+
+/* Previne flash de conteúdo não estilizado */
+body.loading {
+    opacity: 0;
+}
+
+body.loaded {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}

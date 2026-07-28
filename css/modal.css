@@ -1,0 +1,178 @@
+/* ===== MODAL PREMIUM + BACKDROP ===== */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.55);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity 0.28s ease;
+}
+
+/* O atributo hidden vence a exibição (evita que display:flex mantenha visível) */
+.modal-backdrop[hidden] {
+    display: none;
+}
+
+.modal-backdrop.visible {
+    opacity: 1;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: clamp(1.8rem, 5vw, 2.8rem);
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+    transition: opacity 0.3s ease, transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.visible .modal {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #9a9a9a;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modal-close svg {
+    width: 15px;
+    height: 15px;
+}
+
+.modal-close:hover {
+    background: #f2f2f2;
+    color: #1a1a1a;
+}
+
+.modal-close:focus-visible {
+    outline: 3px solid var(--primary-yellow);
+    outline-offset: 2px;
+}
+
+.modal-icon {
+    width: clamp(64px, 16vw, 78px);
+    height: clamp(64px, 16vw, 78px);
+    margin: 0 auto clamp(1.1rem, 3vw, 1.4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-yellow) 0%, #ffd740 100%);
+    box-shadow: 0 8px 20px rgba(245, 197, 24, 0.35);
+}
+
+.modal-icon svg {
+    width: 46%;
+    height: 46%;
+    color: #1a1a1a;
+}
+
+.modal-title {
+    font-size: clamp(1.3rem, 5vw, 1.6rem);
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.25;
+    margin-bottom: clamp(0.9rem, 3vw, 1.2rem);
+}
+
+.modal-body {
+    text-align: left;
+    color: #444444;
+}
+
+.modal-body p {
+    font-size: clamp(0.95rem, 3.2vw, 1.02rem);
+    line-height: 1.6;
+    margin-bottom: 0.9rem;
+}
+
+.modal-list {
+    margin: 0 0 0.4rem;
+    padding-left: 1.2rem;
+}
+
+.modal-list li {
+    font-size: clamp(0.95rem, 3.2vw, 1.02rem);
+    line-height: 1.6;
+    color: #1a1a1a;
+    margin-bottom: 0.3rem;
+}
+
+.modal-list li::marker {
+    color: var(--primary-yellow);
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: clamp(1.4rem, 4vw, 1.8rem);
+}
+
+/* Reaproveita .whatsapp-btn (verde) do calculator.css; aqui só ajusta a margem */
+.modal-wpp {
+    margin: 0;
+}
+
+.modal-back {
+    background: transparent;
+    color: #666666;
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.95rem, 3.5vw, 1.05rem);
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modal-back:hover {
+    background: #f2f2f2;
+    color: #1a1a1a;
+}
+
+.modal-back:focus-visible {
+    outline: 3px solid var(--primary-yellow);
+    outline-offset: 2px;
+}
+
+/* Trava o scroll do fundo enquanto o modal está aberto */
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal-backdrop,
+    .modal {
+        transition: opacity 0.01ms;
+    }
+    .modal {
+        transform: none;
+    }
+}

@@ -1,0 +1,51 @@
+/* Bloco de público — faixa curta logo abaixo do hero.
+   Nomeia quem é o cliente antes de qualquer argumento de venda. */
+
+.audience {
+    width: 100%;
+    background: var(--primary-yellow);
+    padding: clamp(1.8rem, 5vh, 2.6rem) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.audience-container {
+    max-width: 520px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.audience-text {
+    font-size: clamp(1rem, 3.8vw, 1.2rem);
+    font-weight: 400;
+    line-height: 1.55;
+    color: #1a1a1a;
+}
+
+.audience-text strong {
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .audience-container {
+        max-width: 680px;
+    }
+
+    .audience-text {
+        font-size: clamp(1.15rem, 2.6vw, 1.35rem);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .audience-container {
+        max-width: 860px;
+    }
+
+    .audience-text {
+        font-size: 1.35rem;
+    }
+}
