@@ -32,6 +32,15 @@
     letter-spacing: -0.02em;
 }
 
+.services-title-kw {
+    display: block;
+    margin-top: 0.6rem;
+    font-size: clamp(0.95rem, 2.4vw, 1.25rem);
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #5a5a5a;
+}
+
 .services-title-underline {
     width: clamp(180px, 50%, 270px);
     height: 5px;
